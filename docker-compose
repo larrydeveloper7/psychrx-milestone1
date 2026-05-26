@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  docuseal:
+    image: docuseal/docuseal:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./docuseal_data:/data
+    environment:
+      - SECRET_KEY_BASE=psychrx_local_secret
+      - FORCE_SSL=false
